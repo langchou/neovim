@@ -35,6 +35,12 @@ return require('packer').startup(function(use)
         -- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
         ---------------------------------------
         -- NOTE: PUT YOUR THIRD PLUGIN HERE --
         ---------------------------------------
@@ -67,7 +73,7 @@ return require('packer').startup(function(use)
         use 'mhinz/vim-startify'
         use 'github/copilot.vim'
         use 'lukas-reineke/indent-blankline.nvim'
-	use {
+	    use {
           'nvim-telescope/telescope.nvim',
           requires = { {'nvim-lua/plenary.nvim'} }
         }
