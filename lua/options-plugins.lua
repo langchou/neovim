@@ -89,3 +89,17 @@ vim.cmd([[ let g:copilot_filetypes = {
                               \ '*': v:true,
                               \ }
 ]])
+
+-- ~/.config/nvim/lua/options-plugins.lua
+local telescope = require('telescope')
+
+telescope.setup{
+  defaults = {
+    -- 在这里添加你需要的配置选项
+  }
+}
+
+-- 绑定键位
+vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { noremap = true, silent = true })
+

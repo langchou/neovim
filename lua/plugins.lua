@@ -33,7 +33,7 @@ vim.cmd([[
 --     run = string, function, or table, -- Specify operations to be run after successful installs/updates of a plugin
 return require('packer').startup(function(use)
         -- Packer can manage itself
-        use 'wbthomason/packer.nvim'
+	use 'wbthomason/packer.nvim'
 
         ---------------------------------------
         -- NOTE: PUT YOUR THIRD PLUGIN HERE --
@@ -67,6 +67,11 @@ return require('packer').startup(function(use)
         use 'mhinz/vim-startify'
         use 'github/copilot.vim'
         use 'lukas-reineke/indent-blankline.nvim'
+	use {
+          'nvim-telescope/telescope.nvim',
+          requires = { {'nvim-lua/plenary.nvim'} }
+        }
+	
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
